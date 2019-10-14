@@ -4,26 +4,26 @@
 
 namespace fms::sequence {
 
-    template<class S, class V = value_type<S>>
-    class take : public base<S, V> {
+    template<class S>
+    class take : public base<S> {
     private:
         long n;
     public:
         take(long n, S s)
-            : base<S, V>(s), n(n)
+            : base<S>(s), n(n)
         {
             if (n < 0) {
                 n = -n; // !!! take(-n, end(s) + n)
             }
         }
         const auto operator<=>(const take&) const = default;
-        operator bool() const override
+        operator bool() const // hide
         {
             return n != 0;
         }
-        take& operator++() override
+        take& operator++() // hide
         {
-            base<S,V>::operator++();
+            base<S>::operator++();
             --n;
 
             return *this;

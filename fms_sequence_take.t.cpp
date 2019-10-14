@@ -9,7 +9,7 @@ int test_sequence_take()
 {
     {
         X x[] = { 1, 2 };
-        auto t = take<X*,X>(2, x);
+        auto t = take<X*>(2, x);
         take t2(t);
         t = t2;
 

@@ -1,16 +1,13 @@
 // fms_sequence_base.h - Base sequence
 #pragma once
 #include <compare>
-#include <type_traits>>
+#include <iterator>
+#include <concepts>
 
 namespace fms::sequence {
 
-    template<class S>
-    using value_type = std::invoke_result_t<decltype(&S::operator*), S>;
-    // !!!Or S* if no S::operator*
-
-    // Override in base classes to specialize.
-    template<class S, class V = value_type<S>>
+    // Hide member functions in derived classes to specialize.
+    template<class /* std::input_iterator */ S>
     class base {
     private:
         S s;
@@ -21,15 +18,19 @@ namespace fms::sequence {
         virtual ~base()
         { }
         const auto operator<=>(const base&) const = default;
-        virtual operator bool() const
+        operator bool() const
         {
             return true;
         }
-        virtual V operator*() const
+        const auto& operator*() const
         {
             return *s;
         }
-        virtual base& operator++()
+        auto& operator*()
+        {
+            return *s;
+        }
+        base& operator++()
         {
             ++s;
 

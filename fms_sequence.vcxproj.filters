@@ -21,6 +21,12 @@
     <ClInclude Include="fms_sequence_take.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="fms_sequence_equal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fms_sequence.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="fms_sequence.t.cpp">

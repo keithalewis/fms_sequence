@@ -147,7 +147,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="fms_sequence.h" />
     <ClInclude Include="fms_sequence_base.h" />
+    <ClInclude Include="fms_sequence_equal.h" />
     <ClInclude Include="fms_sequence_take.h" />
   </ItemGroup>
   <ItemGroup>

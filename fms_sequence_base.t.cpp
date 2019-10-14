@@ -10,7 +10,7 @@ int test_sequence_base()
 {
     {
         X x[] = { 1, 2 };
-        base<X*,X> b(x);
+        base b(x);
         base b2(b);
         assert(b == b2);
 
@@ -31,7 +31,7 @@ int test_sequence_base()
     {
         std::vector<X> x({ 1, 2 });
         X* px = &x[0];
-        base<X*,X> b(px);
+        base b(px);
         base b2(b);
         b = b2;
 
@@ -43,6 +43,8 @@ int test_sequence_base()
         assert(!(b > b2));
 
         assert(x[0] == *b);
+        *b = 3;
+        assert(3 == *b);
         ++b;
         assert(x[1] == *b);
         assert(++b); // out of range
