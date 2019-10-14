@@ -11,7 +11,11 @@ namespace fms::sequence {
     public:
         take(long n, S s)
             : base<S, V>(s), n(n)
-        { }
+        {
+            if (n < 0) {
+                n = -n; // !!! take(-n, end(s) + n)
+            }
+        }
         const auto operator<=>(const take&) const = default;
         operator bool() const override
         {

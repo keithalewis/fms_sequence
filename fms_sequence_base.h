@@ -7,6 +7,7 @@ namespace fms::sequence {
 
     template<class S>
     using value_type = std::invoke_result_t<decltype(&S::operator*), S>;
+    // !!!Or S* if no S::operator*
 
     // Override in base classes to specialize.
     template<class S, class V = value_type<S>>
