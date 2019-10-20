@@ -1,13 +1,31 @@
 // fms_sequence_base.h - Base sequence
 #pragma once
 #include <compare>
-#include <iterator>
 #include <concepts>
+#include <iterator>
+#include <type_traits>
+
+namespace fms::sequence {
+
+	template<class S>
+	using value_type = std::invoke_result_t<decltype(&S::operator*), S>;
+
+}
+
+template <class T, class U>
+concept derived = std::is_base_of<U, T>::value;
+
+template<typename S>
+concept sequence_base = requires(S s) {
+	{s} -> bool;
+	{*s} -> decltype(*s);
+	{++s}->S&;
+};
 
 namespace fms::sequence {
 
     // Hide member functions in derived classes to specialize.
-    template<class /* std::input_iterator */ S>
+    template<sequence_base S>
     class base {
     private:
         S s;
@@ -20,7 +38,7 @@ namespace fms::sequence {
         const auto operator<=>(const base&) const = default;
         operator bool() const
         {
-            return true;
+            return s;
         }
         const auto& operator*() const
         {
