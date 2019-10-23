@@ -27,6 +27,75 @@
     <ClInclude Include="fms_sequence.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="fms_sequence_apply.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fms_sequence_binop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fms_sequence_cache.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fms_sequence_choose.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fms_sequence_concatenate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fms_sequence_constant.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fms_sequence_copy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fms_sequence_epsilon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fms_sequence_factorial.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fms_sequence_flatten.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fms_sequence_iota.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fms_sequence_item.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fms_sequence_iterator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fms_sequence_length.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fms_sequence_list.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fms_sequence_null.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fms_sequence_pointer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fms_sequence_power.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fms_sequence_reverse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fms_sequence_skip.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fms_sequence_sum.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fms_sequence_traits.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fms_sequence_unique.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="fms_sequence.t.cpp">
@@ -36,6 +105,63 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="fms_sequence_take.t.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fms_sequence_apply.t.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fms_sequence_binop.t.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fms_sequence_cache.t.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fms_sequence_choose.t.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fms_sequence_concatenate.t.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fms_sequence_constant.t.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fms_sequence_copy.t.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fms_sequence_epsilon.t.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fms_sequence_equal.t.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fms_sequence_factorial.t.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fms_sequence_flatten.t.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fms_sequence_iota.t.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fms_sequence_item.t.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fms_sequence_iterator.t.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fms_sequence_list.t.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fms_sequence_null.t.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fms_sequence_reverse.t.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fms_sequence_sum.t.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fms_sequence_unique.t.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

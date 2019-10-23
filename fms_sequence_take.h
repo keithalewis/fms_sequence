@@ -1,30 +1,39 @@
-// fms_sequence_take.h - Take items from a sequence.
+// fms_sequence_take.h - iterators with operator bool() const
 #pragma once
-#include "fms_sequence_base.h"
+#include <compare>
+#include "fms_sequence_reverse.h"
 
 namespace fms::sequence {
 
     template<class S>
-    class take : public base<S> {
-    private:
+    class take {
         long n;
+        S s;
     public:
         take(long n, S s)
-            : base<S>(s), n(n)
+            : n(n), s(s)
         {
             if (n < 0) {
-                n = -n; // !!! take(-n, end(s) + n)
+                n = -n;
+                // constexpr if has reverse
+                //s = take(n, reverse(s, s - n));
             }
         }
         const auto operator<=>(const take&) const = default;
-        operator bool() const // hide
+        operator bool() const
         {
-            return n != 0;
+            return n != 0 && s;
         }
-        take& operator++() // hide
+        auto operator*() const
         {
-            base<S>::operator++();
-            --n;
+            return *s;
+        }
+        take& operator++()
+        {
+            if (operator bool()) {
+                --n;
+                ++s;
+            }
 
             return *this;
         }

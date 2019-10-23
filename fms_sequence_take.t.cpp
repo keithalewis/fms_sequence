@@ -1,4 +1,4 @@
-// fms_sequence_take.t.cpp - Test fms::sequence::take.
+// fms_sequence.t.cpp - test sequences
 #include <cassert>
 #include "fms_sequence_take.h"
 
@@ -7,22 +7,25 @@ using namespace fms::sequence;
 template<class X>
 int test_sequence_take()
 {
+    X x[] = { 1, 2, 3 };
     {
-        X x[] = { 1, 2 };
-        auto t = take<X*>(2, x);
-        take t2(t);
-        t = t2;
-
-        assert(t == t2);
-        assert(!(t != t2));
-
-        assert(x[0] == *t);
-        ++t;
-        assert(x[1] == *t);
-        ++t;
-        assert(!t);
+        take s(3, x);
+        assert(s);
+        assert(*s == 1);
+        ++s;
+        assert(s);
+        assert(*s == 2);
+        ++s;
+        assert(s);
+        assert(*s == 3);
+        ++s;
+        assert(!s);
     }
 
     return 0;
 }
+
 int test_sequence_take_int = test_sequence_take<int>();
+int test_sequence_take_float = test_sequence_take<float>();
+int test_sequence_take_double = test_sequence_take<double>();
+
