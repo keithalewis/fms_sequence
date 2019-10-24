@@ -12,6 +12,7 @@
 #include "fms_sequence_epsilon.h"
 #include "fms_sequence_equal.h"
 #include "fms_sequence_factorial.h"
+#include "fms_sequence_filter.h"
 #include "fms_sequence_iota.h"
 #include "fms_sequence_item.h"
 #include "fms_sequence_iterator.h"
