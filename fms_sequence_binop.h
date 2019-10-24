@@ -18,7 +18,7 @@ namespace fms::sequence {
         const auto operator<=>(const binop&) const = default;
         operator bool() const
         {
-            return s && t;
+            return s and t;
         }
         X operator*() const
         {

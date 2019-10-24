@@ -17,7 +17,7 @@ namespace fms::sequence {
         { }
         bool operator==(const cache& c) const
         {
-            return n == c.n && s == c.s && std::equal(s_.begin(), s_.end(), c.s_.begin(), c.s_.end());
+            return n == c.n and s == c.s and std::equal(s_.begin(), s_.end(), c.s_.begin(), c.s_.end());
         }
         bool operator!=(const cache& c) const
         {
@@ -60,7 +60,7 @@ namespace fms::sequence {
         cache& operator++()
         {
             ++s;
-            if (s && n < s_.size()) {
+            if (s and n < s_.size()) {
                 s_.push_back(*s);
             }
             ++n;

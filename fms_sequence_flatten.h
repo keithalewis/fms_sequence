@@ -13,7 +13,7 @@ namespace fms::sequence {
         { }
         operator bool() const
         {
-            return ss && *ss;
+            return ss and *ss;
         }
         auto operator*() const
         {
@@ -21,7 +21,7 @@ namespace fms::sequence {
         }
         flatten& operator++()
         {
-            if (ss && *ss) {
+            if (ss and *ss) {
                 ++(*ss);
                 if (!*ss) {
                     ++ss;

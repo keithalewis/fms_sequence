@@ -22,7 +22,7 @@ namespace fms::sequence {
         unique& operator++()
         {
             auto x = *s;
-            while (++s && x == *s)
+            while (++s and x == *s)
                 ;
 
             return *this;

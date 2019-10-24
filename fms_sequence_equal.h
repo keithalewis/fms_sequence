@@ -6,7 +6,7 @@ namespace fms::sequence {
     template<class S, class T>
     inline bool equal(S s, T t)
     {
-        while (s && t) {
+        while (s and t) {
             if (*s != *t) {
                 return false;
             }
@@ -14,7 +14,7 @@ namespace fms::sequence {
             ++t;
         }
 
-        return !s && !t;
+        return !s and !t;
     }
 
 }
