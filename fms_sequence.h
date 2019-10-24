@@ -1,12 +1,14 @@
 // fms_sequence.h - iterators with operator bool() const
 #pragma once
 #include "fms_sequence_apply.h"
+#include "fms_sequence_back.h"
 #include "fms_sequence_binop.h"
 #include "fms_sequence_cache.h"
 #include "fms_sequence_choose.h"
 #include "fms_sequence_concatenate.h"
 #include "fms_sequence_constant.h"
 #include "fms_sequence_copy.h"
+#include "fms_sequence_end.h"
 #include "fms_sequence_epsilon.h"
 #include "fms_sequence_equal.h"
 #include "fms_sequence_factorial.h"

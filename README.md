@@ -1,2 +1,3 @@
 # fms_sequence
-Iterators having operator bool() to indicate the end
+
+Iterators having `operator bool() const` to indicate the end

@@ -149,6 +149,7 @@
   <ItemGroup>
     <ClInclude Include="fms_sequence.h" />
     <ClInclude Include="fms_sequence_apply.h" />
+    <ClInclude Include="fms_sequence_back.h" />
     <ClInclude Include="fms_sequence_base.h" />
     <ClInclude Include="fms_sequence_binop.h" />
     <ClInclude Include="fms_sequence_cache.h" />
@@ -156,9 +157,11 @@
     <ClInclude Include="fms_sequence_concatenate.h" />
     <ClInclude Include="fms_sequence_constant.h" />
     <ClInclude Include="fms_sequence_copy.h" />
+    <ClInclude Include="fms_sequence_end.h" />
     <ClInclude Include="fms_sequence_epsilon.h" />
     <ClInclude Include="fms_sequence_equal.h" />
     <ClInclude Include="fms_sequence_factorial.h" />
+    <ClInclude Include="fms_sequence_filter.h" />
     <ClInclude Include="fms_sequence_flatten.h" />
     <ClInclude Include="fms_sequence_iota.h" />
     <ClInclude Include="fms_sequence_item.h" />
@@ -178,16 +181,28 @@
   <ItemGroup>
     <ClCompile Include="fms_sequence.t.cpp" />
     <ClCompile Include="fms_sequence_apply.t.cpp" />
-    <ClCompile Include="fms_sequence_base.t.cpp" />
+    <ClCompile Include="fms_sequence_back.t.cpp" />
+    <ClCompile Include="fms_sequence_base.t.cpp">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="fms_sequence_binop.t.cpp" />
     <ClCompile Include="fms_sequence_cache.t.cpp" />
     <ClCompile Include="fms_sequence_choose.t.cpp" />
     <ClCompile Include="fms_sequence_concatenate.t.cpp" />
     <ClCompile Include="fms_sequence_constant.t.cpp" />
     <ClCompile Include="fms_sequence_copy.t.cpp" />
+    <ClCompile Include="fms_sequence_end.t.cpp" />
     <ClCompile Include="fms_sequence_epsilon.t.cpp" />
     <ClCompile Include="fms_sequence_equal.t.cpp" />
     <ClCompile Include="fms_sequence_factorial.t.cpp" />
+    <ClCompile Include="fms_sequence_filter.t.cpp" />
     <ClCompile Include="fms_sequence_flatten.t.cpp" />
     <ClCompile Include="fms_sequence_iota.t.cpp" />
     <ClCompile Include="fms_sequence_item.t.cpp" />

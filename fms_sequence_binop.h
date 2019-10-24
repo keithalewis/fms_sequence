@@ -41,7 +41,6 @@ namespace fms::sequence {
 
 }
 
-
 template<class S, class T, class X = fms::sequence::common_value_type<S, T>>
 inline auto operator+(S s, T t)
 {
