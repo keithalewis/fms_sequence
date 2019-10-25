@@ -2,54 +2,59 @@
 #pragma once
 #include <initializer_list>
 #include <vector>
+#include "fms_sequence_interface.h"
 
 namespace fms::sequence {
 
     template<class X>
-    class list {
-        std::vector<X> s;
+    class list : public interface<std::vector<X>, X> {
+		typedef interface<std::vector<X>, X> I;
         size_t n;
     public:
         list(const std::initializer_list<X>& s)
-            : s(s.begin(), s.end()), n(0)
+            : I(std::vector<X>(s.begin(), s.end())), n(0)
         { }
         list(const std::vector<X>& s)
-            : s(s), n(0)
+            : I(s), n(0)
         { }
         list(size_t n, const X* s)
-            : s(s, s + n), n(0)
+            : I(std::vector(s, s + n)), n(0)
         { }
+		
         size_t size() const
         {
-            return s.size();
+            return I::s.size();
         }
         auto begin()
         {
-            return s.begin();
+            return I::s.begin();
         }
         auto end()
         {
-            return s.end();
+            return I::s.end();
         }
         void reset()
         {
             n = 0;
         }
-        operator bool() const
+		
+        bool op_bool() const override
         {
-            return n < s.size();
+            return n < I::s.size();
         }
-        X operator*() const
+        X op_star() const override
         {
-            return s[n];
+            return I::s[n];
         }
+		/*
         X& operator*()
         {
-            return s[n];
+            return I::s[n];
         }
-        list& operator++()
+		*/
+        list& op_incr() override
         {
-            if (n < s.size()) {
+            if (op_bool()) {
                 ++n;
             }
 
@@ -64,5 +69,11 @@ namespace fms::sequence {
             return *this;
         }
     };
+
+	// aliases
+	template<class X> 
+	using vector = list<X>;
+	template<class X> 
+	using array = list<X>;
 
 }

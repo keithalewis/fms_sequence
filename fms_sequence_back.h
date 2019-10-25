@@ -13,7 +13,7 @@ namespace fms::sequence {
 			++s;
 		}
 
-		return *s_;
+		return s_;
 	}
 
 }

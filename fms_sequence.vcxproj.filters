@@ -54,9 +54,6 @@
     <ClInclude Include="fms_sequence_factorial.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="fms_sequence_flatten.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="fms_sequence_iota.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -105,6 +102,12 @@
     <ClInclude Include="fms_sequence_end.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="fms_sequence_repeat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fms_sequence_interface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="fms_sequence.t.cpp">
@@ -144,9 +147,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="fms_sequence_factorial.t.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="fms_sequence_flatten.t.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="fms_sequence_iota.t.cpp">

@@ -8,7 +8,7 @@ using namespace fms::sequence;
 int test_sequence_back()
 {
 	list l({ 1, 2, 3 });
-	assert(3 == back(l));
+	assert(3 == *back(l));
 
 	return 0;
 }

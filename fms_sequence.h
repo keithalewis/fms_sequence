@@ -21,6 +21,7 @@
 #include "fms_sequence_null.h"
 #include "fms_sequence_pointer.h"
 #include "fms_sequence_power.h"
+#include "fms_sequence_repeat.h"
 #include "fms_sequence_reverse.h"
 #include "fms_sequence_skip.h"
 #include "fms_sequence_sum.h"

@@ -1,6 +1,7 @@
 // fms_sequence_list.t.cpp - Test list sequence
 #include <cassert>
 #include "fms_sequence_list.h"
+#include "fms_sequence_binop.h"
 #include "fms_sequence_cache.h"
 #include "fms_sequence_concatenate.h"
 #include "fms_sequence_length.h"
@@ -41,14 +42,25 @@ void test_list(S s)
 template<class X>
 int test_sequence_list()
 {
-    test_list(list({ X(1), X(2), X(3) }));
-    std::vector<X> s{ 1, 2, 3 };
-    test_list(list(s));
-    test_list(list(3, &s[0]));
-    X one = 1, two = 2, three = 3;
-    auto l = cache(concatenate(list(1, &one), concatenate(list(1, &two), list(1, &three))));
-    assert(length(l) == 3);
-    test_list(l);
+	{
+		test_list(list({ X(1), X(2), X(3) }));
+		std::vector<X> s{ 1, 2, 3 };
+		test_list(list(s));
+		test_list(list(3, &s[0]));
+		X one = 1, two = 2, three = 3;
+		auto l = cache(concatenate(list(1, &one), concatenate(list(1, &two), list(1, &three))));
+		assert(length(l) == 3);
+		test_list(l);
+	}
+	{
+		std::vector<X> s{ 1, 2, 3 };
+		test_list(vector<X>(s));
+		test_list(array<X>(3, &s[0]));
+		X one = 1, two = 2, three = 3;
+		auto l = cache(concatenate(list(1, &one), concatenate(list(1, &two), list(1, &three))));
+		assert(length(l) == 3);
+		test_list(l);
+	}
 
     return 0;
 }

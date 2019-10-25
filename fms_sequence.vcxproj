@@ -162,7 +162,7 @@
     <ClInclude Include="fms_sequence_equal.h" />
     <ClInclude Include="fms_sequence_factorial.h" />
     <ClInclude Include="fms_sequence_filter.h" />
-    <ClInclude Include="fms_sequence_flatten.h" />
+    <ClInclude Include="fms_sequence_interface.h" />
     <ClInclude Include="fms_sequence_iota.h" />
     <ClInclude Include="fms_sequence_item.h" />
     <ClInclude Include="fms_sequence_iterator.h" />
@@ -171,6 +171,7 @@
     <ClInclude Include="fms_sequence_null.h" />
     <ClInclude Include="fms_sequence_pointer.h" />
     <ClInclude Include="fms_sequence_power.h" />
+    <ClInclude Include="fms_sequence_repeat.h" />
     <ClInclude Include="fms_sequence_reverse.h" />
     <ClInclude Include="fms_sequence_skip.h" />
     <ClInclude Include="fms_sequence_sum.h" />
@@ -203,7 +204,6 @@
     <ClCompile Include="fms_sequence_equal.t.cpp" />
     <ClCompile Include="fms_sequence_factorial.t.cpp" />
     <ClCompile Include="fms_sequence_filter.t.cpp" />
-    <ClCompile Include="fms_sequence_flatten.t.cpp" />
     <ClCompile Include="fms_sequence_iota.t.cpp" />
     <ClCompile Include="fms_sequence_item.t.cpp" />
     <ClCompile Include="fms_sequence_iterator.t.cpp" />
