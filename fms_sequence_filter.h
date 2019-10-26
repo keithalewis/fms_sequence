@@ -11,7 +11,7 @@ namespace fms::sequence {
 		filter(const P& p, const S& _s)
 			: p(p), s(_s)
 		{
-			while (s and !p(*s)) {
+			while (s and p(*s) == false) {
 				++s;
 			}
 		}
@@ -25,7 +25,7 @@ namespace fms::sequence {
 		}
 		filter& operator++()
 		{
-			while (++s and !p(*s)) {
+			while (++s and p(*s) == false) {
 				++s;
 			}
 

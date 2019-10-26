@@ -1,6 +1,7 @@
 // fms_sequence_filter.t.cpp - Test sequence filter.
 #include <cassert>
 #include "fms_sequence_filter.h"
+#include "fms_sequence_length.h"
 #include "fms_sequence_take.h"
 #include "fms_sequence_equal.h"
 
@@ -25,6 +26,11 @@ int test_sequence_filter()
 	{
 		auto t = filter([](int i) { return true; }, ti);
 		assert(equal(t, ti));
+	}
+	{
+		auto t = filter([](int i) { return false; }, ti);
+		assert(!t);
+		assert(0 == length(t));
 	}
 
 	return 0;

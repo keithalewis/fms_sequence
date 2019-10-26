@@ -25,6 +25,10 @@ namespace fms::sequence {
         {
             return I::s.size();
         }
+		void push_back(const X& x)
+		{
+			I::s.push_back(x);
+		}
         auto begin()
         {
             return I::s.begin();

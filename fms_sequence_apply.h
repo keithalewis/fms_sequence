@@ -13,7 +13,7 @@ namespace fms::sequence {
         apply(const F& f, const S& s)
             : f(f), s(s)
         { }
-        const auto operator<=>(const apply&) const = default;
+        //const auto operator<=>(const apply&) const = default;
         operator bool() const
         {
             return s;
